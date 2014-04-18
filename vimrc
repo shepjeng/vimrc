@@ -196,7 +196,8 @@ syntax enable
 set t_Co=16
 colorscheme shepjeng
 
-" Tab hotkeys
+" Tab settings/hotkeys
+set tabpagemax=50
 nmap <LEADER>tn :tabnew<CR>
 nmap <LEADER>tk :tabclose<CR>
 nmap <C-H> :tabprev<CR>
