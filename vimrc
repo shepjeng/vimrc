@@ -11,26 +11,16 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Vim scripts repositories
 Plugin 'vim-ruby/vim-ruby'
 
-Plugin 'vim-scripts/CRefVim'
-Plugin 'vim-scripts/stlrefvim'
-
 Plugin 'tpope/vim-fugitive'
-Plugin 'motemen/git-vim'
-Plugin 'vim-scripts/vcscommand.vim'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-
-Plugin 'vim-scripts/AutoComplPop'
-Plugin 'FromtonRouge/OmniCppComplete'
-Plugin 'Shougo/neocomplcache.vim'
-
-Plugin 'kana/vim-fakeclip'
 
 
 " Allow backspacing over everything in insert mode
@@ -205,10 +195,6 @@ nmap <C-L> :tabnext<CR>
 
 " Nerd Tree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
-" ACP && neocomplcache are conflict
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
 
 " TagBar
 nnoremap <silent> <F4> :TagbarToggle<CR>
