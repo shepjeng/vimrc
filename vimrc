@@ -8,9 +8,8 @@ filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Vim scripts repositories
@@ -21,6 +20,9 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 
 " Allow backspacing over everything in insert mode
