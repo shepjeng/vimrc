@@ -157,28 +157,24 @@ set mouse=
 " Most terminals send modern xterm mouse reporting but this isn't always detected in GNU Screen.
 set ttymouse=xterm2
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
+" Enable file type detection.
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+filetype plugin on
+filetype indent on
 
-    " Enable file type detection.
-    " Use the default filetype settings, so that mail gets 'tw' set to 72,
-    " 'cindent' is on in C files, etc.
-    " Also load indent files, to automatically do language-dependent indenting.
-    filetype plugin on
-    filetype indent on
+" Highlight current line in Insert Mode
+function! s:EnterInsert()
+    set cursorline
+endfunction
 
-    " Highlight current line in Insert Mode
-    function! s:EnterInsert()
-        set cursorline
-    endfunction
+function! s:LeaveInsert()
+    set nocursorline
+endfunction
 
-    function! s:LeaveInsert()
-        set nocursorline
-    endfunction
-
-    autocmd InsertLeave * call s:LeaveInsert()
-    autocmd InsertEnter * call s:EnterInsert()
-endif
+autocmd InsertLeave * call s:LeaveInsert()
+autocmd InsertEnter * call s:EnterInsert()
 
 " Markdown
 augroup mkd
@@ -198,6 +194,24 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Enable OmniCompletion
+" http://vim.wikia.com/wiki/Omni_completion
+set omnifunc=syntaxcomplete#Complete
+" Enable global scope search
+let OmniCpp_GlobalScopeSearch = 1
+" Show function parameters
+let OmniCpp_ShowPrototypeInAbbr = 1
+" Show access information in pop-up menu
+let OmniCpp_ShowAccess = 1
+" Auto complete after '.'
+let OmniCpp_MayCompleteDot = 1
+" Auto complete after '->'
+let OmniCpp_MayCompleteArrow = 1
+" Auto complete after '::'
+let OmniCpp_MayCompleteScope = 0
+" Don't select first item in pop-up menu
+let OmniCpp_SelectFirstItem = 0
 
 " Tab settings/hotkeys
 set tabpagemax=50
