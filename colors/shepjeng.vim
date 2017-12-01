@@ -215,3 +215,6 @@ hi Error            cterm=none  ctermfg=9       ctermbg=none
 
 "*Todo              anything that needs extra attention; mostly the "keywords TODO FIXME and XXX
 hi Todo             cterm=none  ctermfg=11      ctermbg=1
+
+hi ColorColumn      cterm=none  ctermfg=DarkRed ctermbg=Black
+hi ExtraWhitespace  cterm=none  ctermfg=none    ctermbg=Red

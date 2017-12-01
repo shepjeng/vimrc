@@ -187,7 +187,17 @@ augroup END
 
 syntax enable
 set t_Co=16
+" 80 characters line
+set colorcolumn=81
+"execute "set colorcolumn=" . join(range(81,335), ',')
 colorscheme shepjeng
+
+" Highlight trailing spaces
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " Tab settings/hotkeys
 set tabpagemax=50
