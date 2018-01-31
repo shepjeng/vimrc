@@ -21,6 +21,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
+Plugin 'shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -195,24 +196,6 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Enable OmniCompletion
-" http://vim.wikia.com/wiki/Omni_completion
-set omnifunc=syntaxcomplete#Complete
-" Enable global scope search
-let OmniCpp_GlobalScopeSearch = 1
-" Show function parameters
-let OmniCpp_ShowPrototypeInAbbr = 1
-" Show access information in pop-up menu
-let OmniCpp_ShowAccess = 1
-" Auto complete after '.'
-let OmniCpp_MayCompleteDot = 1
-" Auto complete after '->'
-let OmniCpp_MayCompleteArrow = 1
-" Auto complete after '::'
-let OmniCpp_MayCompleteScope = 0
-" Don't select first item in pop-up menu
-let OmniCpp_SelectFirstItem = 0
-
 " Tab settings/hotkeys
 set tabpagemax=50
 nmap <LEADER>tn :tabnew<CR>
@@ -229,6 +212,21 @@ let g:tagbar_autoclose = 1
 let g:tagbar_width = 40
 let g:tagbar_autofocus = 1
 let g:tagbar_expand = 1
+
+" NeoComplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " Spell
 map <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
