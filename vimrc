@@ -14,10 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vim scripts repositories
 Plugin 'vim-ruby/vim-ruby'
-
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
@@ -25,7 +23,6 @@ Plugin 'shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -177,25 +174,6 @@ endfunction
 autocmd InsertLeave * call s:LeaveInsert()
 autocmd InsertEnter * call s:EnterInsert()
 
-" Markdown
-augroup mkd
-    autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
-augroup END
-
-syntax enable
-set t_Co=16
-" 80 characters line
-set colorcolumn=81
-"execute "set colorcolumn=" . join(range(81,335), ',')
-colorscheme shepjeng
-
-" Highlight trailing spaces
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 " Tab settings/hotkeys
 set tabpagemax=50
 nmap <LEADER>tn :tabnew<CR>
@@ -208,25 +186,6 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " TagBar
 nnoremap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autoclose = 1
-let g:tagbar_width = 40
-let g:tagbar_autofocus = 1
-let g:tagbar_expand = 1
-
-" NeoComplete
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " Spell
 map <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
@@ -245,6 +204,36 @@ map <F7> :if &expandtab<BAR>
         \   set tabstop=8<BAR>
         \   set expandtab?<BAR>
         \ endif<CR><BAR>
+
+" NeoComplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+syntax enable
+set t_Co=16
+" 80 characters line
+set colorcolumn=81
+"execute "set colorcolumn=" . join(range(81,335), ',')
+colorscheme shepjeng
+
+" Highlight trailing spaces
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 
 if has("gui_running")
     set t_Co=256
