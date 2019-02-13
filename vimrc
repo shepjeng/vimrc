@@ -220,6 +220,8 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
+let g:ruby_recommended_style = 0
+
 syntax enable
 set t_Co=16
 " 80 characters line
