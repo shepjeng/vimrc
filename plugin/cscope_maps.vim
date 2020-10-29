@@ -40,16 +40,22 @@ if has("cscope")
 
     " add any cscope database in current directory
     if filereadable("cscope.out")
-        cs add cscope.out  
+        cs add cscope.out
     " else add the database pointed to by environment variable 
     elseif $CSCOPE_DB != ""
         cs add $CSCOPE_DB
+    else
+        let cscope_file=findfile("cscope.out", ".;")
+        let cscope_pre=matchstr(cscope_file, ".*/")
+        if !empty(cscope_file) && filereadable(cscope_file)
+            exe "cs add" cscope_file cscope_pre
+        endif
     endif
 
     " show msg when any other cscope db added
-    set cscopeverbose  
+    set cscopeverbose
 
-	set cscopequickfix=s-,c-,d-,i-,t-,e-
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
 
     """"""""""""" My cscope/vim key mappings
     "
@@ -90,14 +96,14 @@ if has("cscope")
     " go back to where you were before the search.  
     "
 
-    nmap <C-[>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-	nmap <C-[>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-	nmap <C-[>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-[>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
     nmap <C-[>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-[>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-[>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
@@ -106,19 +112,19 @@ if has("cscope")
     "
     " (Note: earlier versions of vim may not have the :scs command, but it
     " can be simulated roughly via:
-    "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
-    nmap <C-[><C-[>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[><C-[>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[><C-[>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[><C-[>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[><C-[>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-[><C-[>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-[><C-[>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
-    nmap <C-[><C-[>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-[><C-[>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[><C-[>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[><C-[>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[><C-[>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[><C-[>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-[><C-[>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-[><C-[>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-[><C-[>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-    " Hitting CTRL-space *twice* before the search type does a vertical 
+    " Hitting CTRL-space *twice* before the search type does a vertical
     " split instead of a horizontal one (vim 6 and up only)
     "
     " (Note: you may wish to put a 'set splitright' in your .vimrc
@@ -129,8 +135,8 @@ if has("cscope")
     nmap <C-\>c :tab scs find c <C-R>=expand("<cword>")<CR><CR>
     nmap <C-\>t :tab scs find t <C-R>=expand("<cword>")<CR><CR>
     nmap <C-\>e :tab scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>f :tab scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-\>i :tab scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
+    nmap <C-\>f :tab scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-\>i :tab scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-\>d :tab scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
