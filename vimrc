@@ -185,16 +185,18 @@ nnoremap <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &
 nnoremap <F6> :set list!<CR><BAR>:set list?<CR>
 
 " Expand tab
-" map <F7> :set expandtab!<CR><BAR>:set expandtab?<CR>
-nnoremap <F7> :if &expandtab<BAR>
-        \   set noexpandtab<BAR>
-        \   set tabstop=4<BAR>
-        \   set expandtab?<BAR>
-        \ else<BAR>
-        \   set expandtab<BAR>
-        \   set tabstop=8<BAR>
-        \   set expandtab?<BAR>
-        \ endif<CR><BAR>
+function! ExpandTabToggle()
+    if &expandtab
+        set noexpandtab
+        set tabstop=4
+    else
+        set expandtab
+        set tabstop=8
+    endif
+	set expandtab?
+endfunction
+
+nnoremap <F7> :call ExpandTabToggle()<CR>
 
 " NeoComplete
 " Disable AutoComplPop.
