@@ -172,6 +172,11 @@ nnoremap <LEADER>tc :tabclose<CR>
 nnoremap <C-H> :tabprev<CR>
 nnoremap <C-L> :tabnext<CR>
 
+" Quickfix settings
+nnoremap <LEADER>cw :cw<CR>
+nnoremap <LEADER>cn :cn<CR>
+nnoremap <LEADER>cp :cp<CR>
+
 " Nerd Tree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
