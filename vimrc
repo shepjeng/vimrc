@@ -8,12 +8,8 @@ filetype off                  " required
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
@@ -21,10 +17,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
 Plugin 'shougo/neocomplete.vim'
 
-
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -35,7 +30,6 @@ set whichwrap+=<,>,h,l
 " Encoding
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,big5,latin1,gb2312,enc-cn
 set termencoding=utf-8
 set ambiwidth=double
 
@@ -157,12 +151,6 @@ set mouse=
 " Most terminals send modern xterm mouse reporting but this isn't always detected in GNU Screen.
 set ttymouse=xterm2
 
-" Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
-" Also load indent files, to automatically do language-dependent indenting.
-filetype plugin on
-filetype indent on
 
 " Highlight current line in Insert Mode
 function! s:EnterInsert()
@@ -176,12 +164,13 @@ endfunction
 autocmd InsertLeave * call s:LeaveInsert()
 autocmd InsertEnter * call s:EnterInsert()
 
+
 " Tab settings/hotkeys
 set tabpagemax=50
-nmap <LEADER>tn :tabnew<CR>
-nmap <LEADER>tk :tabclose<CR>
-nmap <C-H> :tabprev<CR>
-nmap <C-L> :tabnext<CR>
+nnoremap <LEADER>tn :tabnew<CR>
+nnoremap <LEADER>tc :tabclose<CR>
+nnoremap <C-H> :tabprev<CR>
+nnoremap <C-L> :tabnext<CR>
 
 " Nerd Tree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
@@ -190,14 +179,14 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 nnoremap <silent> <F4> :TagbarToggle<CR>
 
 " Spell
-map <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+nnoremap <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 
 " List
-map <F6> :set list!<CR><BAR>:set list?<CR>
+nnoremap <F6> :set list!<CR><BAR>:set list?<CR>
 
 " Expand tab
 " map <F7> :set expandtab!<CR><BAR>:set expandtab?<CR>
-map <F7> :if &expandtab<BAR>
+nnoremap <F7> :if &expandtab<BAR>
         \   set noexpandtab<BAR>
         \   set tabstop=4<BAR>
         \   set expandtab?<BAR>
@@ -222,7 +211,6 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-let g:ruby_recommended_style = 0
 
 syntax enable
 set t_Co=16
@@ -230,6 +218,7 @@ set t_Co=16
 set colorcolumn=81
 "execute "set colorcolumn=" . join(range(81,335), ',')
 colorscheme shepjeng
+
 
 " Highlight trailing spaces
 match ExtraWhitespace /\s\+$/
