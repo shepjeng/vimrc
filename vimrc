@@ -15,6 +15,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
