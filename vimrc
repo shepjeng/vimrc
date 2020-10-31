@@ -15,7 +15,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
-Plugin 'shougo/neocomplete.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -203,27 +202,11 @@ endfunction
 
 nnoremap <F7> :call ExpandTabToggle()<CR>
 
-" NeoComplete
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
 
 syntax enable
 set t_Co=16
 " 80 characters line
 set colorcolumn=81
-"execute "set colorcolumn=" . join(range(81,335), ',')
 colorscheme shepjeng
 
 
