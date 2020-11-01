@@ -105,7 +105,7 @@ hi Search           cterm=none  ctermfg=1       ctermbg=11
 "SpecialKey         Meta and special keys listed with ":map", also for text used
 "                   to show unprintable characters in the text, 'listchars'.
 "                   Generally: text that is displayed differently from what it really is.
-hi SpecialKey       cterm=none  ctermfg=14      ctermbg=none
+hi SpecialKey       cterm=none  ctermfg=6       ctermbg=none
 
 "SpellBad           Word that is not recognized by the spellchecker.
 "                   This will be combined with the highlighting used otherwise.

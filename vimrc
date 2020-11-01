@@ -50,7 +50,7 @@ set titlestring=%f\ %h%r%m
 
 " Set list mode
 set nolist
-set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
+set listchars=tab:»₋,trail:₋,eol:$,nbsp:%,extends:»,precedes:«
 
 " Favorite filetypes
 set fileformat=unix
@@ -198,7 +198,7 @@ function! ExpandTabToggle()
         set expandtab
         set tabstop=8
     endif
-	set expandtab?
+    set expandtab?
 endfunction
 
 nnoremap <F7> :call ExpandTabToggle()<CR>
