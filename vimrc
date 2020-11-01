@@ -50,7 +50,8 @@ set titlestring=%f\ %h%r%m
 
 " Set list mode
 set nolist
-set listchars=tab:»₋,trail:₋,eol:$,nbsp:%,extends:»,precedes:«
+set listchars=tab:»₋,trail:₋,eol:↲,nbsp:␣,extends:»,precedes:«
+set showbreak=↪\
 
 " Favorite filetypes
 set fileformat=unix

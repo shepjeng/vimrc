@@ -77,7 +77,7 @@ hi MoreMsg          cterm=none  ctermfg=11      ctermbg=none
 "                   'showbreak' and other characters that do not really exist in
 "                   the text (e.g., ">" displayed when a double-wide character
 "                   doesn't fit at the end of the line).
-hi NonText          cterm=none  ctermfg=8       ctermbg=none
+hi NonText          cterm=none  ctermfg=4       ctermbg=none
 
 "Normal             normal text
 hi Normal           cterm=none  ctermfg=none    ctermbg=none
