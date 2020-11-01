@@ -204,6 +204,14 @@ endfunction
 nnoremap <F7> :call ExpandTabToggle()<CR>
 
 
+" YouCompleteMe
+let g:ycm_show_diagnostics_ui=0
+let g:ycm_complete_in_comments=1
+let g:ycm_complete_in_strings=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=1
+
+
 syntax enable
 set t_Co=16
 " 80 characters line

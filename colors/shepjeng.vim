@@ -7,9 +7,9 @@
 " 1: DrakRed         9: Red
 " 2: DrakGreen      10: Green
 " 3: DarkYellow     11: Yellow
-" 4: DrakBlue       12: Blue
-" 5: DrarkMagenta   13: Magenta
-" 6: DrakCyan       14: Cyan
+" 4: DakBlue        12: Blue
+" 5: DarkMagenta    13: Magenta
+" 6: DakCyan        14: Cyan
 " 7: Gray           15: White
 
 hi clear
@@ -86,13 +86,13 @@ hi Normal           cterm=none  ctermfg=none    ctermbg=none
 hi Pmenu            cterm=none  ctermfg=15      ctermbg=8
 
 "PmenuSel           Popup menu: selected item.
-hi PmenuSel         cterm=bold  ctermfg=none    ctermbg=4
+hi PmenuSel         cterm=bold  ctermfg=3       ctermbg=4
 
 "PmenuSbar          Popup menu: scrollbar.
 hi PmenuSbar        cterm=bold  ctermfg=15      ctermbg=7
 
 "PmenuThumb         Popup menu: Thumb of the scrollbar.
-hi PmenuThumb       cterm=bold  ctermfg=none    ctermbg=14
+hi PmenuThumb       cterm=bold  ctermfg=none    ctermbg=12
 
 "Question           Prompt and yes/no questions
 hi Question         cterm=none  ctermfg=11      ctermbg=0
