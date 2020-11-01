@@ -104,14 +104,14 @@ if has("cscope")
     " can be simulated roughly via:
     "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
-    nmap <C-\>s :tab scs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>g :tab scs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>c :tab scs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>t :tab scs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>e :tab scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\>f :tab scs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-\>i :tab scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-\>d :tab scs find d <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>s :tab scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>g :tab scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>c :tab scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>t :tab scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>e :tab scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER>f :tab scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <LEADER>i :tab scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <LEADER>d :tab scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     " Hitting CTRL-space *twice* before the search type does a vertical
@@ -120,14 +120,14 @@ if has("cscope")
     " (Note: you may wish to put a 'set splitright' in your .vimrc
     " if you prefer the new window on the right instead of the left
 
-    nmap <C-\><C-\>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\><C-\>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\><C-\>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\><C-\>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\><C-\>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-\><C-\>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-    nmap <C-\><C-\>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-\><C-\>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <LEADER><LEADER>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <LEADER><LEADER>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <LEADER><LEADER>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     """"""""""""" key map timeouts
