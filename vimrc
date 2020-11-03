@@ -215,10 +215,8 @@ let g:ycm_min_num_of_chars_for_completion=1
 
 
 syntax enable
-set t_Co=16
-" 80 characters line
-set colorcolumn=81
-colorscheme shepjeng
+set colorcolumn=81      " 80 characters line
+colorscheme cccheng
 
 
 " Highlight trailing spaces

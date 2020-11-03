@@ -8,11 +8,11 @@ if exists('syntax_on')
     syntax reset
 endif
 
-"if $TERM == 'xterm-256color'
-"    set termguicolors
-"else
-"    set t_Co=16
-"endif
+if $TERM == 'xterm-256color'
+    "set termguicolors
+else
+    set t_Co=16
+endif
 
 let g:colors_name = 'cccheng'
 
@@ -161,10 +161,12 @@ hi SpellBad     cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 "               This will be combined with the highlighting used otherwise.
 
 " StatusLine    status line of current window
+hi StatusLine   cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE    guifg=White         guibg=DarkBlue
 
 " StatusLineNC  status lines of not-current windows
 "               Note: if this is equal to "StatusLine" Vim will use "^^^" in
 "               the status line of the current window.
+hi StatusLineNC cterm=NONE      ctermfg=Gray        ctermbg=Blue        gui=NONE    guifg=Gray          guibg=Blue
 
 " StatusLineTerm status line of current window, if it is a |terminal| window.
 
@@ -172,16 +174,21 @@ hi SpellBad     cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 "               window.
 
 " TabLine       tab pages line, not active tab page label
+hi TabLine      cterm=NONE      ctermfg=DarkGray    ctermbg=NONE        gui=NONE    guifg=DarkGray      guibg=NONE
 
 " TabLineFill   tab pages line, where there are no labels
+hi TabFill      cterm=NONE      ctermfg=NONE        ctermbg=NONE        gui=NONE    guifg=NONE          guibg=NONE
 
 " TabLineSel    tab pages line, active tab page label
+hi TabLineSel   cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE    guifg=White         guibg=DarkBlue
 
 " Terminal      |terminal| window (see |terminal-size-color|)
 
 " Title         titles for output from ":set all", ":autocmd" etc.
+hi Title        cterm=NONE      ctermfg=DarkGreen   ctermbg=NONE        gui=NONE    guifg=DarkGreen     guibg=NONE
 
 " Visual        Visual mode selection
+hi Visual       cterm=NONE      ctermfg=Black       ctermbg=DarkYellow  gui=NONE    guifg=Black         guibg=DarkYellow
 
 " VisualNOS     Visual mode selection when vim is "Not Owning the Selection".
 "               Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
@@ -265,4 +272,9 @@ hi Error        cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 
 "*Todo          anything that needs extra attention; mostly the
 "               keywords TODO FIXME and XXX
+hi Todo         cterm=NONE      ctermfg=Yellow      ctermbg=DarkRed     gui=NONE    guifg=Yellow        guibg=DarkRed
+
+
+hi ColorColumn  cterm=NONE      ctermfg=DarkRed     ctermbg=Black       gui=NONE    guifg=DarkRed       guibg=Black
+hi ExtraWhitespace cterm=NONE   ctermfg=NONE        ctermbg=Red         gui=NONE    guifg=NONE          guibg=Red
 
