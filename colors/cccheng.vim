@@ -168,11 +168,13 @@ hi StatusLine   cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE
 " StatusLineNC  status lines of not-current windows
 "               Note: if this is equal to "StatusLine" Vim will use "^^^" in
 "               the status line of the current window.
-hi StatusLineNC cterm=NONE      ctermfg=Gray        ctermbg=Blue        gui=NONE    guifg=Gray          guibg=Blue
+hi StatusLineNC cterm=NONE      ctermfg=Black       ctermbg=Blue        gui=NONE    guifg=Gray          guibg=Blue
 
 " StatusLineTerm status line of current window, if it is a |terminal| window.
+hi StatusLineTerm cterm=NONE    ctermfg=White       ctermbg=DarkBlue    gui=NONE    guifg=White         guibg=DarkBlue
 
 " StatusLineTermNC status lines of not-current windows that is a |terminal|
+hi StatusLineTermNC cterm=NONE  ctermfg=Black       ctermbg=Blue        gui=NONE    guifg=Gray          guibg=Blue
 "               window.
 
 " TabLine       tab pages line, not active tab page label

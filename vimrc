@@ -182,6 +182,9 @@ nnoremap <LEADER>cw :cw<CR>
 nnoremap <LEADER>cn :cn<CR>
 nnoremap <LEADER>cp :cp<CR>
 
+" Toggle terminal
+nnoremap <LEADER>tm :term<CR>
+
 " Ignore cscope and tags in grep
 set grepprg=grep\ -n\ --exclude=tags\ --exclude=cscope.out*\ $*\ /dev/null
 nnoremap <LEADER>F :grep! -r "<C-R><C-W>" *<CR>:cw<CR>
