@@ -51,19 +51,19 @@ let g:colors_name = 'cccheng'
 "               set
 
 " Directory     directory names (and other special names in listings)
-hi Directory    cterm=NONE      ctermfg=DarkGreen   ctermbg=NONE        gui=NONE    guifg=DarkGreen     guibg=NONE
+hi Directory    cterm=NONE      ctermfg=Green       ctermbg=NONE        gui=NONE    guifg=Green         guibg=NONE
 
 " DiffAdd       diff mode: Added line |diff.txt|
-hi DiffAdd      cterm=NONE      ctermfg=White       ctermbg=NONE        gui=NONE    guifg=White         guibg=NONE
+hi DiffAdd      cterm=Bold      ctermfg=Black       ctermbg=Green       gui=NONE    guifg=Black         guibg=Green
 
 " DiffChange    diff mode: Changed line |diff.txt|
-hi DiffChange   cterm=NONE      ctermfg=Gray        ctermbg=NONE        gui=NONE    guifg=Gray          guibg=NONE
+hi DiffChange   cterm=NONE      ctermfg=Black       ctermbg=Yellow      gui=NONE    guifg=Black         guibg=Yellow
 
 " DiffDelete    diff mode: Deleted line |diff.txt|
-hi DiffDelete   cterm=NONE      ctermfg=DarkGray    ctermbg=NONE        gui=NONE    guifg=DarkGray      guibg=NONE
+hi DiffDelete   cterm=NONE      ctermfg=LightRed    ctermbg=Red         gui=NONE    guifg=LightRed      guibg=Red
 
 " DiffText      diff mode: Changed text within a changed line |diff.txt|
-hi DiffText     cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE    guifg=Red           guibg=NONE
+hi DiffText     cterm=Bold      ctermfg=Red         ctermbg=Yellow      gui=NONE    guifg=Red           guibg=Yellow
 
 " EndOfBuffer   filler lines (~) after the last line in the buffer.
 "               By default, this is highlighted like |hl-NonText|.
@@ -74,7 +74,7 @@ hi DiffText     cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 hi VertSplit    cterm=NONE      ctermfg=Blue        ctermbg=NONE        gui=NONE    guifg=Blue          guibg=NONE
 
 " Folded        line used for closed folds
-hi Folded       cterm=NONE      ctermfg=Yellow      ctermbg=NONE        gui=NONE    guifg=Yellow        guibg=NONE
+hi Folded       cterm=NONE      ctermfg=Black       ctermbg=Blue        gui=NONE    guifg=Black         guibg=Blue
 
 " FoldColumn    'foldcolumn'
 hi FoldColumn   cterm=NONE      ctermfg=DarkYellow  ctermbg=NONE        gui=NONE    guifg=DarkYellow    guibg=NONE
@@ -83,11 +83,10 @@ hi FoldColumn   cterm=NONE      ctermfg=DarkYellow  ctermbg=NONE        gui=NONE
 
 " IncSearch     'incsearch' highlighting; also used for the text replaced with
                 ":s///c"
-hi IncSearch    cterm=NONE      ctermfg=NONE        ctermbg=Yellow      gui=NONE    guifg=NONE          guibg=Yellow
 
 " LineNr        Line number for ":number" and ":#" commands, and when 'number'
 "               or 'relativenumber' option is set.
-hi LineNr       cterm=NONE      ctermfg=Yellow      ctermbg=NONE        gui=NONE    guifg=Yellow        guibg=NONE
+hi LineNr       cterm=NONE      ctermfg=Yellow      ctermbg=DarkBlue   gui=NONE    guifg=Yellow         guibg=DarkBlue
 
 " LineNrAbove   Line number for when the 'relativenumber'
 "               option is set, above the cursor line.
@@ -188,7 +187,7 @@ hi TabLineSel   cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE
 hi Title        cterm=NONE      ctermfg=DarkGreen   ctermbg=NONE        gui=NONE    guifg=DarkGreen     guibg=NONE
 
 " Visual        Visual mode selection
-hi Visual       cterm=NONE      ctermfg=Black       ctermbg=DarkYellow  gui=NONE    guifg=Black         guibg=DarkYellow
+hi Visual       cterm=NONE      ctermfg=DarkYellow      ctermbg=Yellow  gui=NONE    guifg=DarkYellow    guibg=Yellow
 
 " VisualNOS     Visual mode selection when vim is "Not Owning the Selection".
 "               Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
