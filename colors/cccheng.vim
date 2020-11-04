@@ -220,7 +220,7 @@ hi Constant     cterm=NONE      ctermfg=Green       ctermbg=NONE        gui=NONE
 " String        a string constant: "this is a string"
 hi String       cterm=NONE      ctermfg=Green       ctermbg=NONE        gui=NONE    guifg=Green         guibg=NONE
 " Character     a character constant: 'c', '\n'
-hi Character    cterm=NONE      ctermfg=Green       ctermbg=NONE        gui=NONE    guifg=Green         guibg=NONE
+hi Character    cterm=NONE      ctermfg=LightGreen  ctermbg=NONE        gui=NONE    guifg=LightGreen    guibg=NONE
 " Number        a number constant: 234, 0xff
 hi Number       cterm=NONE      ctermfg=Cyan        ctermbg=NONE        gui=NONE    guifg=Cyan          guibg=NONE
 " Boolean       a boolean constant: TRUE, false
@@ -248,6 +248,7 @@ hi PreProc      cterm=NONE      ctermfg=DarkGreen   ctermbg=NONE        gui=NONE
 " Define        preprocessor #define
 " Macro         same as Define
 " PreCondit     preprocessor #if, #else, #endif, etc.
+hi PreCondit    cterm=Bold      ctermfg=DarkGreen   ctermbg=NONE        gui=Bold    guifg=DarkGreen     guibg=NONE
 
 "*Type          int, long, char, etc.
 hi Type         cterm=NONE      ctermfg=DarkGreen   ctermbg=NONE        gui=NONE    guifg=DarkGreen     guibg=NONE
@@ -272,7 +273,7 @@ hi Error        cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 
 "*Todo          anything that needs extra attention; mostly the
 "               keywords TODO FIXME and XXX
-hi Todo         cterm=NONE      ctermfg=Yellow      ctermbg=DarkRed     gui=NONE    guifg=Yellow        guibg=DarkRed
+hi Todo         cterm=NONE      ctermfg=Yellow      ctermbg=Red         gui=NONE    guifg=Yellow        guibg=Red
 
 
 hi ColorColumn  cterm=NONE      ctermfg=DarkRed     ctermbg=Black       gui=NONE    guifg=DarkRed       guibg=Black
