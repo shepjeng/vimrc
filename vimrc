@@ -89,6 +89,9 @@ set ignorecase
 set smartcase
 set incsearch
 
+" Highlight search things
+set hlsearch
+
 " Set magic on
 set magic
 
@@ -102,9 +105,6 @@ set showmatch
 
 " How many tenths of a second to blink
 set matchtime=2
-
-" Highlight search things
-set hlsearch
 
 " Always show the statusline
 set laststatus=2
@@ -178,6 +178,10 @@ nnoremap <C-L> :tabnext<CR>
 nnoremap <LEADER>cw :cw<CR>
 nnoremap <LEADER>cn :cn<CR>
 nnoremap <LEADER>cp :cp<CR>
+
+" Ignore cscope and tags in grep
+set grepprg=grep\ -n\ --exclude=tags\ --exclude=cscope.out*\ $*\ /dev/null
+nnoremap <LEADER>F :grep! -r "<C-R><C-W>" *<CR>:cw<CR>
 
 " Nerd Tree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
