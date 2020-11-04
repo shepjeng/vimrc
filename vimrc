@@ -19,6 +19,7 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'morhetz/gruvbox'
+Plugin 'cocopon/iceberg.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
