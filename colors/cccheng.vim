@@ -2,6 +2,7 @@
 " Maintainer:   Chung-Chiang Cheng <shepjeng@gmail.com>
 
 hi clear
+set t_Co=256
 set background=dark
 
 if exists('syntax_on')
@@ -10,8 +11,6 @@ endif
 
 if $TERM == 'xterm-256color'
     "set termguicolors
-else
-    set t_Co=16
 endif
 
 let g:colors_name = 'cccheng'
@@ -33,6 +32,7 @@ let g:colors_name = 'cccheng'
 "hi Example     cterm=NONE      ctermfg=NONE    ctermbg=NONE            gui=NONE    guifg=NONE          guibg=NONE
 
 " ColorColumn   used for the columns set with 'colorcolumn'
+hi ColorColumn  cterm=Bold      ctermfg=NONE        ctermbg=Black       gui=Bold    guifg=NONE          guibg=Black
 
 " Conceal       placeholder characters substituted for concealed
 "               text (see 'conceallevel')
@@ -49,21 +49,22 @@ let g:colors_name = 'cccheng'
 
 " CursorLine    the screen line that the cursor is in when 'cursorline' is
 "               set
+hi CursorLine   cterm=Bold      ctermfg=NONE        ctermbg=NONE        gui=Bold    guifg=NONE          guibg=NONE
 
 " Directory     directory names (and other special names in listings)
 hi Directory    cterm=NONE      ctermfg=Green       ctermbg=NONE        gui=NONE    guifg=Green         guibg=NONE
 
 " DiffAdd       diff mode: Added line |diff.txt|
-hi DiffAdd      cterm=Bold      ctermfg=Black       ctermbg=Green       gui=NONE    guifg=Black         guibg=Green
+hi DiffAdd      cterm=NONE      ctermfg=DarkGreen   ctermbg=DarkGray    gui=NONE    guifg=Green         guibg=NONE
 
 " DiffChange    diff mode: Changed line |diff.txt|
-hi DiffChange   cterm=NONE      ctermfg=Black       ctermbg=Yellow      gui=NONE    guifg=Black         guibg=Yellow
+hi DiffChange   cterm=NONE      ctermfg=NONE        ctermbg=DarkGray    gui=NONE    guifg=Yellow        guibg=NONE
 
 " DiffDelete    diff mode: Deleted line |diff.txt|
 hi DiffDelete   cterm=NONE      ctermfg=LightRed    ctermbg=Red         gui=NONE    guifg=LightRed      guibg=Red
 
 " DiffText      diff mode: Changed text within a changed line |diff.txt|
-hi DiffText     cterm=Bold      ctermfg=Red         ctermbg=Yellow      gui=NONE    guifg=Red           guibg=Yellow
+hi DiffText     cterm=Bold      ctermfg=Yellow      ctermbg=DarkGray    gui=NONE    guifg=Red           guibg=NONE
 
 " EndOfBuffer   filler lines (~) after the last line in the buffer.
 "               By default, this is highlighted like |hl-NonText|.
@@ -71,7 +72,7 @@ hi DiffText     cterm=Bold      ctermfg=Red         ctermbg=Yellow      gui=NONE
 " ErrorMsg      error messages on the command line
 
 " VertSplit     the column separating vertically split windows
-hi VertSplit    cterm=NONE      ctermfg=Blue        ctermbg=NONE        gui=NONE    guifg=Blue          guibg=NONE
+hi VertSplit    cterm=NONE      ctermfg=Blue        ctermbg=Blue        gui=NONE    guifg=Blue          guibg=Blue
 
 " Folded        line used for closed folds
 hi Folded       cterm=NONE      ctermfg=Black       ctermbg=Blue        gui=NONE    guifg=Black         guibg=Blue
@@ -80,6 +81,7 @@ hi Folded       cterm=NONE      ctermfg=Black       ctermbg=Blue        gui=NONE
 hi FoldColumn   cterm=NONE      ctermfg=DarkYellow  ctermbg=NONE        gui=NONE    guifg=DarkYellow    guibg=NONE
 
 " SignColumn    column where |signs| are displayed
+hi SignColumn   cterm=Bold      ctermfg=None        ctermbg=DarkGray    gui=Bold    guifg=NONE          guibg=DarkGray
 
 " IncSearch     'incsearch' highlighting; also used for the text replaced with
                 ":s///c"
@@ -97,6 +99,7 @@ hi LineNr       cterm=NONE      ctermfg=Yellow      ctermbg=DarkBlue   gui=NONE 
 " CursorLineNr  Like LineNr when 'cursorline' is set and 'cursorlineopt' is
 "               set to "number" or "both", or 'relativenumber' is set, for
 "               the cursor line.
+hi CursorLineNr cterm=Bold      ctermfg=DarkCyan    ctermbg=DarkBlue    gui=NONE    guifg=Yellow         guibg=DarkBlue
 
 " MatchParen    The character under the cursor or just before it, if it
 "               is a paired bracket, and its match. |pi_paren.txt|
@@ -207,6 +210,8 @@ hi Visual       cterm=NONE      ctermfg=DarkYellow      ctermbg=Yellow  gui=NONE
 " Tooltip       Current font, background and foreground of the tooltips.
 "               Applicable highlight arguments: font, guibg, guifg.
 
+hi ExtraWhitespace cterm=NONE   ctermfg=NONE        ctermbg=Red         gui=NONE    guifg=NONE          guibg=Red
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Source code hightlight groups
@@ -273,8 +278,4 @@ hi Error        cterm=NONE      ctermfg=Red         ctermbg=NONE        gui=NONE
 "*Todo          anything that needs extra attention; mostly the
 "               keywords TODO FIXME and XXX
 hi Todo         cterm=NONE      ctermfg=Yellow      ctermbg=Red         gui=NONE    guifg=Yellow        guibg=Red
-
-
-hi ColorColumn  cterm=NONE      ctermfg=DarkRed     ctermbg=Black       gui=NONE    guifg=DarkRed       guibg=Black
-hi ExtraWhitespace cterm=NONE   ctermfg=NONE        ctermbg=Red         gui=NONE    guifg=NONE          guibg=Red
 
