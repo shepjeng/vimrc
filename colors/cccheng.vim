@@ -121,10 +121,10 @@ hi NonText      cterm=NONE      ctermfg=DarkBlue    ctermbg=NONE        gui=NONE
 hi Normal       cterm=NONE      ctermfg=NONE        ctermbg=NONE        gui=NONE    guifg=NONE          guibg=NONE
 
 " Pmenu         Popup menu: normal item.
-hi Pmenu        cterm=NONE      ctermfg=White       ctermbg=DarkGray    gui=NONE    guifg=White         guibg=DarkGray
+hi Pmenu        cterm=NONE      ctermfg=White       ctermbg=Blue        gui=NONE    guifg=White         guibg=DarkGray
 
 " PmenuSel      Popup menu: selected item.
-hi PmenuSel     cterm=BOLD      ctermfg=DarkYellow  ctermbg=DarkBlue    gui=BOLD    guifg=DarkYellow    guibg=DarkBlue
+hi PmenuSel     cterm=BOLD      ctermfg=Yellow      ctermbg=DarkBlue    gui=BOLD    guifg=DarkYellow    guibg=DarkBlue
 
 " PmenuSbar     Popup menu: scrollbar.
 hi PmenuSbar    cterm=BOLD      ctermfg=White       ctermbg=Gray        gui=BOLD    guifg=White         guibg=Gray
