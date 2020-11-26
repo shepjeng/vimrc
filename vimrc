@@ -134,11 +134,11 @@ set autoindent      " Copy indent from current line when starting a new line
 set nosmartindent
 
 " Tab
-set expandtab
+set noexpandtab
 set nosmarttab
 set tabstop=8       " real tab characters are 8 spaces wide
 set softtabstop=4   " <BS> over an autoindent deletes both spaces
-set shiftwidth=4    " an indent level is 4 spaces wide
+set shiftwidth=8    " an indent level is 8 spaces wide
 
 " Folding
 set foldenable
@@ -195,25 +195,23 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " TagBar
 nnoremap <silent> <F4> :TagbarToggle<CR>
 
-" Spell
-nnoremap <F5> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
-
 " List
-nnoremap <F6> :set list!<CR><BAR>:set list?<CR>
+nnoremap <F5> :set list!<CR><BAR>:set list?<CR>
 
 " Expand tab
 function! ExpandTabToggle()
     if &expandtab
         set noexpandtab
-        set tabstop=4
     else
         set expandtab
-        set tabstop=8
     endif
     set expandtab?
 endfunction
 
-nnoremap <F7> :call ExpandTabToggle()<CR>
+nnoremap <F6> :call ExpandTabToggle()<CR>
+
+" Spell
+nnoremap <F7> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 
 
 " YouCompleteMe
