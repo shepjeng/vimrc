@@ -181,7 +181,7 @@ hi StatusLineTermNC cterm=NONE  ctermfg=Black       ctermbg=Blue        gui=NONE
 hi TabLine      cterm=NONE      ctermfg=DarkGray    ctermbg=NONE        gui=NONE    guifg=DarkGray      guibg=NONE
 
 " TabLineFill   tab pages line, where there are no labels
-hi TabFill      cterm=NONE      ctermfg=NONE        ctermbg=NONE        gui=NONE    guifg=NONE          guibg=NONE
+hi TabLineFill  cterm=NONE      ctermfg=NONE        ctermbg=NONE        gui=NONE    guifg=NONE          guibg=NONE
 
 " TabLineSel    tab pages line, active tab page label
 hi TabLineSel   cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE    guifg=White         guibg=DarkBlue
