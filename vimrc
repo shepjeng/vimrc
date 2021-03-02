@@ -202,8 +202,10 @@ nnoremap <F5> :set list!<CR><BAR>:set list?<CR>
 function! ExpandTabToggle()
     if &expandtab
         set noexpandtab
+        set shiftwidth=8
     else
         set expandtab
+        set shiftwidth=4
     endif
     set expandtab?
 endfunction
