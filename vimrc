@@ -113,7 +113,7 @@ set matchtime=2
 set laststatus=2
 
 " Format the statusline
-set statusline=%<%f%m%r%h\ ::%{getcwd()}%=0x%-4B%6.(%c%)%13.(%l/%L%)%5.(%p%%%)
+set statusline=%<%h\::%{getcwd()}::%f%m%r::%{tagbar#currenttag('%s\ ','','f')}%=0x%-4B%6.(%c%)%13.(%l/%L%)%5.(%p%%%)
 
 " No viminfo
 set viminfo=""
