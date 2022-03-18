@@ -16,6 +16,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular.git'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'morhetz/gruvbox'
