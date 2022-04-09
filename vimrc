@@ -229,6 +229,7 @@ syntax enable
 " set colorcolumn=81      " 80 characters line
 colorscheme cccheng
 
+autocmd FileType gitcommit setlocal spell
 
 " Highlight trailing spaces
 match ExtraWhitespace /\s\+$/
