@@ -18,6 +18,7 @@ Plugin 'godlygeek/tabular.git'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-dispatch'
 
 Plugin 'morhetz/gruvbox'
 Plugin 'cocopon/iceberg.vim'
