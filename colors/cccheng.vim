@@ -121,16 +121,16 @@ hi NonText      cterm=NONE      ctermfg=DarkBlue    ctermbg=NONE        gui=NONE
 hi Normal       cterm=NONE      ctermfg=NONE        ctermbg=NONE        gui=NONE    guifg=NONE          guibg=NONE
 
 " Pmenu         Popup menu: normal item.
-hi Pmenu        cterm=NONE      ctermfg=White       ctermbg=Blue        gui=NONE    guifg=White         guibg=DarkGray
+hi Pmenu        cterm=NONE      ctermfg=White       ctermbg=DarkBlue    gui=NONE    guifg=White         guibg=DarkGray
 
 " PmenuSel      Popup menu: selected item.
-hi PmenuSel     cterm=BOLD      ctermfg=Yellow      ctermbg=DarkBlue    gui=BOLD    guifg=DarkYellow    guibg=DarkBlue
+hi PmenuSel     cterm=BOLD      ctermfg=Yellow      ctermbg=DarkGreen   gui=BOLD    guifg=DarkYellow    guibg=DarkBlue
 
 " PmenuSbar     Popup menu: scrollbar.
-hi PmenuSbar    cterm=BOLD      ctermfg=White       ctermbg=Gray        gui=BOLD    guifg=White         guibg=Gray
+hi PmenuSbar    cterm=BOLD      ctermfg=White       ctermbg=Blue        gui=BOLD    guifg=White         guibg=Gray
 
 " PmenuThumb    Popup menu: Thumb of the scrollbar.
-hi PmenuThumb   cterm=BOLD      ctermfg=NONE        ctermbg=Blue        gui=BOLD    guifg=NONE          guibg=Blue
+hi PmenuThumb   cterm=BOLD      ctermfg=NONE        ctermbg=DarkBlue    gui=BOLD    guifg=NONE          guibg=Blue
 
 " Question      |hit-enter| prompt and yes/no questions
 hi Question     cterm=NONE      ctermfg=Yellow      ctermbg=NONE        gui=NONE    guifg=Yellow        guibg=NONE
