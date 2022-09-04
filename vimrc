@@ -217,13 +217,13 @@ nnoremap <F6> :call ExpandTabToggle()<CR>
 " Spell
 nnoremap <F7> :set spell!<CR><BAR>:echo "Spell check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 
-
 " YouCompleteMe
+let g:ycm_confirm_extra_conf=0
 let g:ycm_show_diagnostics_ui=0
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_min_num_of_chars_for_completion=1
+let g:ycm_min_num_of_chars_for_completion=2
 
 
 syntax enable
@@ -238,21 +238,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-
-if has("gui_running")
-    set t_Co=256
-    set guifont=Monaco\ 10
-    set columns=120
-    set lines=40
-    set mouse=a
-    colorscheme twilight
-endif
-
-if has("gui_macvim")
-    set guifont=Menlo:h14
-    set transparency=5
-endif
 
 set secure
 
