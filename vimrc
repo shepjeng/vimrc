@@ -114,9 +114,6 @@ set matchtime=2
 " Always show the statusline
 set laststatus=2
 
-" Format the statusline
-set statusline=%<%h\::%{getcwd()}::%f%m%r::%{tagbar#currenttag('%s\ ','','f')}%=0x%-4B%6.(%c%)%13.(%l/%L%)%5.(%p%%%)
-
 " No viminfo
 set viminfo=""
 
@@ -225,7 +222,6 @@ let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=2
 
-
 syntax enable
 " set colorcolumn=81      " 80 characters line
 colorscheme cccheng
@@ -238,6 +234,28 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Format the statusline
+hi User1 cterm=NONE ctermfg=Cyan    ctermbg=DarkBlue
+hi User2 cterm=NONE ctermfg=Blue    ctermbg=DarkBlue
+hi User3 cterm=NONE ctermfg=Yellow  ctermbg=DarkBlue
+
+set statusline=
+set statusline+=%1*\ %n\                                 " Buffer number
+set statusline+=%2*│                                    " Separator
+set statusline+=%0*%<%{getcwd()}                         " Current working directory
+set statusline+=%1*/                                     " Separator
+set statusline+=%0*%f%m%r%h%w                            " File path, modified, readonly, helpfile, preview
+set statusline+=%2*\ ::\                                 " Separator
+set statusline+=%3*%{tagbar#currenttag('%s\ ','','f')}   " Current tag
+set statusline+=%=                                       " Right Side
+set statusline+=%0*col\ %v\                              " Colomn number
+set statusline+=%2*│                                    " Separator
+set statusline+=%3*%l/%L\ (%p%%)\                        " Line number / total lines, percentage of document
+set statusline+=%2*│                                    " Separator
+set statusline+=%1*0x%B\                                 " Hex of character under cursor
+set statusline+=%2*│                                    " Separator
+set statusline+=%1*%Y\                                   " FileType
 
 set secure
 
